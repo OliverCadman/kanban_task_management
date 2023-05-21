@@ -1,19 +1,15 @@
-import Sidebar from "./components/Sidebar/Sidebar";
-import Header from "./components/Header/Header";
-import TasksBoard from "./components/TasksBoard/TasksBoard";
-import ShowSidebarButton from "./components/ShowSidebarButton/ShowSidebarButton";
-import ModalOverlay from "./components/ModalOverlay/ModalOverlay";
+import Kanban from "./pages/Kanban";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 import { UseAppStateContext } from "./context/AppStateContext";
-import { UseModalContext } from "./context/ModalContext";
-import { AnimatePresence } from "framer-motion";
 import { useEffect } from "react";
 import { useWindowWidth } from "./hooks/UseWindowWidth";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.scss";
 
 function App() {
   const [appState, setAppState] = UseAppStateContext();
-  const [modalData] = UseModalContext();
   const windowWidth = useWindowWidth();
 
   useEffect(() => {
@@ -40,18 +36,13 @@ function App() {
 
   return (
     <div className={appState.theme === "dark" ? "theme-dark" : "theme-light"}>
-      <Header />
-      {!appState.isMobileDevice ? <Sidebar /> : ""}
-
-      <TasksBoard />
-      {!appState.sideBarOpen ? <ShowSidebarButton /> : ""}
-      {modalData.isModalDisplayed ? (
-        <AnimatePresence>
-          <ModalOverlay modalData={modalData} />
-        </AnimatePresence>
-      ) : (
-        ""
-      )}
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route path="kanban" element={<Kanban />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
