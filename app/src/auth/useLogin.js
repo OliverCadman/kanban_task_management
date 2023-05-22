@@ -1,11 +1,14 @@
 import { useQueryClient, useMutation } from "@tanstack/react-query";
 import { ResponseError } from "../utils/errors";
 import { useNavigate } from "react-router";
+import { QUERY_KEY } from "../constants/query_keys";
 
 const login = async (email, password) => {
-  const response = await fetch("http://127.0.0.1:8000/login", {
+  const response = await fetch("https://127.0.0.1:443/login", {
     method: "POST",
     body: JSON.stringify({ email, password }),
+    mode: "cors",
+    credentials: "include",
     headers: {
       "Content-Type": "application/json",
     },
@@ -18,6 +21,7 @@ const login = async (email, password) => {
   }
 
   data = await response.json();
+  console.log("RESPONSE:", response);
   return data;
 };
 
@@ -27,8 +31,8 @@ export const useLogin = () => {
 
   const { mutate: loginMutation } = useMutation({
     mutationFn: ({ email, password }) => login(email, password),
-    onSuccess: () => {
-      console.log("success?");
+    onSuccess: (data) => {
+      queryClient.setQueryData([QUERY_KEY.user], data);
       navigate("/kanban");
     },
     onError: (error, response) => {

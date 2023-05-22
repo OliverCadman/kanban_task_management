@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sidebar from "../components/kanban/Sidebar/Sidebar";
 import Header from "../components/kanban/Header/Header";
 import TasksBoard from "../components/kanban/TasksBoard/TasksBoard";
@@ -7,10 +7,14 @@ import ModalOverlay from "../components/kanban/ModalOverlay/ModalOverlay";
 import { UseModalContext } from "../context/ModalContext";
 import { UseAppStateContext } from "../context/AppStateContext";
 import { AnimatePresence } from "framer-motion";
+import useUser from "../auth/useUser";
 
 const Kanban = () => {
   const [modalData] = UseModalContext();
   const [appState] = UseAppStateContext();
+
+  const user = useUser();
+
   return (
     <>
       <Header />

@@ -1,4 +1,4 @@
-import { useState, createContext, useContext, useMemo } from "react";
+import { useState, createContext, useContext } from "react";
 import boards from "../data";
 
 const BoardContext = createContext();
