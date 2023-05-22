@@ -1,0 +1,49 @@
+.form--container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form--wrapper {
+  background-color: $white;
+  width: 100%;
+  max-width: 450px;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow;
+}
+
+.form-label {
+  color: var(--text-secondary);
+  font-size: $font-sm-2;
+  font-weight: $font-weight-light;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.4rem 0.25rem;
+  background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  border-radius: $base-border-radius;
+  height: 40px;
+  border: 1px solid var(--line-color);
+  font-family: $font-primary;
+  font-size: $font-sm;
+
+  &:focus {
+    border-color: $purple-light;
+    outline-color: $purple-light;
+  }
+}
+.submit-btn {
+  @include primary-btn();
+  border-radius: $base-border-radius;
+}
+
+.auth-small {
+  font-size: $font-xs;
+  color: var(--auth-small-color);
+}

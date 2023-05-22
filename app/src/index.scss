@@ -48,22 +48,23 @@ label {
 @import "./assets/css/mixins";
 
 ///////////// Components
-@import "./components/ShowSidebarButton/showsidebarbutton";
-@import "./components/Sidebar/sidebar";
-@import "./components/MobileNav/mobilenav";
-@import "./components/Nav/nav";
-@import "./components/Header/header";
-@import "./components/TasksBoard/tasksboard";
-@import "./components/Column/column";
-@import "./components/TaskCard/taskcard";
-@import "./components/ModalOverlay/modaloverlay";
-@import "./components/TaskDetail/taskdetail";
-@import "./components/SubTask/subtask";
-@import "./components/Status/status";
-@import "./components/Tooltip/tooltip";
-@import "./components/ConfirmDeleteModal/confirmdelete";
-@import "./components/ThemeSwitch/themeswitch";
+@import "./components/kanban/ShowSidebarButton/showsidebarbutton";
+@import "./components/kanban/Sidebar/sidebar";
+@import "./components/kanban/MobileNav/mobilenav";
+@import "./components/kanban/Nav/nav";
+@import "./components/kanban/Header/header";
+@import "./components/kanban/TasksBoard/tasksboard";
+@import "./components/kanban/Column/column";
+@import "./components/kanban/TaskCard/taskcard";
+@import "./components/kanban/ModalOverlay/modaloverlay";
+@import "./components/kanban/TaskDetail/taskdetail";
+@import "./components/kanban/SubTask/subtask";
+@import "./components/kanban/Status/status";
+@import "./components/kanban/Tooltip/tooltip";
+@import "./components/kanban/ConfirmDeleteModal/confirmdelete";
+@import "./components/kanban/ThemeSwitch/themeswitch";
 
 // Shared Modules
 @import "./assets/css/shared/modal";
 @import "./assets/css/shared/taskmodal";
+@import "./assets/css/shared/auth";

@@ -38,8 +38,8 @@ function App() {
     <div className={appState.theme === "dark" ? "theme-dark" : "theme-light"}>
       <BrowserRouter>
         <Routes>
-          <Route index element={<Login />} />
-          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route index element={<Register />} />
           <Route path="kanban" element={<Kanban />} />
         </Routes>
       </BrowserRouter>

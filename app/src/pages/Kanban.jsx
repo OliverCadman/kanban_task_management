@@ -1,9 +1,9 @@
 import React from "react";
-import Sidebar from "../components/Sidebar/Sidebar";
-import Header from "../components/Header/Header";
-import TasksBoard from "../components/TasksBoard/TasksBoard";
-import ShowSidebarButton from "../components/ShowSidebarButton/ShowSidebarButton";
-import ModalOverlay from "../components/ModalOverlay/ModalOverlay";
+import Sidebar from "../components/kanban/Sidebar/Sidebar";
+import Header from "../components/kanban/Header/Header";
+import TasksBoard from "../components/kanban/TasksBoard/TasksBoard";
+import ShowSidebarButton from "../components/kanban/ShowSidebarButton/ShowSidebarButton";
+import ModalOverlay from "../components/kanban/ModalOverlay/ModalOverlay";
 import { UseModalContext } from "../context/ModalContext";
 import { UseAppStateContext } from "../context/AppStateContext";
 import { AnimatePresence } from "framer-motion";

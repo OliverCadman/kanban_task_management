@@ -32,6 +32,7 @@
   --themeswitch-bg: #20212c;
   --line-color: #3e3f4e;
   --label-color: #fff;
+  --auth-small-color: #828fa3a0;
 }
 
 .theme-light {
@@ -70,6 +71,7 @@
   --themeswitch-bg: #f4f7fd;
   --line-color: #e4ebfa;
   --label-color: #828fa3;
+  --auth-small-color: #828fa3a0;
 }
 
 $purple-dark: #635fc7; // btn-primary
@@ -89,8 +91,10 @@ $red-2: #ff9898;
 $base-padding: 0.5rem;
 $base-margin: 0.5rem;
 
-// Font Sizes
+// Font Family
+$font-primary: "Plus Jakarta Sans", sans-serif;
 
+// Font Sizes
 $font-header-sm: 0.8rem;
 $font-header-md: 0.9rem;
 $font-header-lg: 1.125rem;
