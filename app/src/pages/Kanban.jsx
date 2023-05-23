@@ -7,13 +7,10 @@ import ModalOverlay from "../components/kanban/ModalOverlay/ModalOverlay";
 import { UseModalContext } from "../context/ModalContext";
 import { UseAppStateContext } from "../context/AppStateContext";
 import { AnimatePresence } from "framer-motion";
-import useUser from "../auth/useUser";
 
 const Kanban = () => {
   const [modalData] = UseModalContext();
   const [appState] = UseAppStateContext();
-
-  const user = useUser();
 
   return (
     <>

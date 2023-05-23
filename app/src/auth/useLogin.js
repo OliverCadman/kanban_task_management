@@ -21,7 +21,7 @@ const login = async (email, password) => {
   }
 
   data = await response.json();
-  console.log("RESPONSE:", response);
+  console.log("RESPONSE:", data);
   return data;
 };
 

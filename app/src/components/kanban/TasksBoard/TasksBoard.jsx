@@ -3,6 +3,7 @@ import Column from "../Column/Column";
 import { UseAppStateContext } from "../../../context/AppStateContext";
 import { UseModalContext } from "../../../context/ModalContext";
 import { UseBoardContext } from "../../../context/BoardContext";
+import useBoardFetch from "../../../data/useBoardFetch";
 import TaskCard from "../TaskCard/TaskCard";
 import {
   findNestedObject,
@@ -26,6 +27,12 @@ const TasksBoard = () => {
   const { boardData, setBoardData } = UseBoardContext();
   const [_, setModalData] = UseModalContext();
   const [sideBarOpen, setSidebarOpen] = useState();
+
+  const board = useBoardFetch();
+
+  useEffect(() => {
+    console.log(board);
+  }, [board]);
 
   const columnColors = [
     "#49C4E5",

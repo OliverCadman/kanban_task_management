@@ -66,7 +66,7 @@ const Register = () => {
             </button>
           </div>
           <p className="auth-small">
-            Already registered? <Link to="/login">Login</Link>
+            Already registered? <Link to="/">Login</Link>
           </p>
         </form>
       </div>

@@ -6,6 +6,7 @@ import { BoardContextProvider } from "./context/BoardContext";
 import { ModalContextProvider } from "./context/ModalContext";
 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const queryClient = new QueryClient();
 
